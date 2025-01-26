@@ -1,0 +1,135 @@
+// // TITLE
+
+.common > .common__container {
+   max-width: 800px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+.title {
+   font-family: 'Core Sens C';
+   font-weight: 600;
+   font-size: 36px;
+   letter-spacing: 0.68px;
+   display: flex;
+   justify-content: start;
+   align-items: start;  
+   gap: 20px;
+   color: $mainFontColor;
+   margin-bottom: 70px;
+   &::before {
+      content: "";
+      flex: 0 0 6px;
+      width: 6px;
+      height: 30px;
+      border-radius: 10px;
+      background-color: blueviolet;
+   }
+}
+
+// PRODUCT CARD
+
+.item-product {
+   position: relative;
+   display: grid;
+   width: 282px;
+   gap: 30px;
+   &--category {
+      gap: 25px;
+      width: 270px;
+      .item-product__picture-link {
+         height: 370px;
+      }
+   }
+   &__picture-link {
+      width: 100%;
+      height: 393px;
+      border-radius: 10px;
+      overflow: hidden;
+   }
+
+   &__img {
+      @extend %img;
+      .item-product--category & {
+          height: 393px;
+      }
+   }
+
+   &__favorite {
+      border-radius: 50%;
+      width: 34px;
+      height: 34px; 
+      position: absolute;
+      top: 26px;
+      right: 20px;
+      &:hover .item-product__img-favorite {
+         transform: scale(1.2);
+      }
+   }
+
+   &__img-favorite {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s ease;
+
+   }
+
+   &__body {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      row-gap: 4px;
+   }
+
+   &__title {
+      color: $mainFontColor;
+      font-weight: 600;
+      .item-product--category & {
+         font-size: 17px;
+         font-weight: 700;
+      }
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+
+   &__link-title {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+
+   &__label {
+      display: grid;
+      grid-row: 2 / 3;
+      font-size: 14px;
+      font-weight: 500;
+   }
+
+   &__price,
+   &__link-arrow {
+      display: grid;
+      grid-column: 2 / 3;
+      grid-row: span 2;
+      align-self: center;
+      justify-content: end;
+   }
+
+   &__price {
+      border-radius: 8px;
+      background: #F6F6F6;
+      padding: 10px 20px;
+      font-weight: 700;
+      font-size: 14px;
+      color: $mainFontColor;
+   }
+
+   &__arrow-img {
+      display: grid;
+      width: 18px;
+   }
+}
+

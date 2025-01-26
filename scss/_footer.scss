@@ -1,0 +1,206 @@
+// FOOTER
+
+.footer {
+   background-color: #3C4242;
+   width: 100%;
+   padding-bottom: 50px;
+   @media (max-width: 670px) {
+      margin-bottom: 80px;
+   }
+
+   // &__container {
+   // }
+
+   &__menu {
+      @include adaptiveValue("padding-top", 75, 30);
+      @include adaptiveValue("padding-left", 85, 5, 0, $containerWidth, 768);
+      @include adaptiveValue("padding-right", 85, 5, 0, $containerWidth, 768);
+      display: flex;
+      flex-wrap: wrap;
+      @include adaptiveValue("row-gap", 30, 15);
+      column-gap: 22px;
+      @media (max-width: 576px) {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+      flex-wrap: wrap;
+      @include adaptiveValue("padding-left", 85, 5, 0, $containerWidth, 768);
+      @include adaptiveValue("padding-right", 85, 5, 0, $containerWidth, 768);
+      @include adaptiveValue("margin-bottom", 50, 20);
+
+      @media (max-width: 576px) {
+         flex-direction: column-reverse;
+         align-items: start;
+      }
+   }
+
+   // &__social {
+   // }
+
+   // &__download {
+   // }
+
+   // &__categories {
+   // }
+
+   &__copy {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center;
+      @include adaptiveValue("padding-top", 40, 10);
+      @include adaptiveValue("padding-bottom", 40, 10);
+   }
+}
+.menu-footer {
+
+   &__block {
+      flex: 1 1 auto;
+      &:not(:last-child) {
+         min-width: 167px;
+      }
+
+      &:last-child {
+         flex: 1 1 400px;
+         max-width: 400px;
+         
+      }
+   }
+
+   &__title {
+      @extend %footer-titles;
+      @include adaptiveValue("margin-bottom", 40, 10);
+   }
+
+   // &__list {
+   // }
+
+   &__item {
+      @extend %footer-items;
+      @include adaptiveValue("margin-bottom", 20, 5);
+   }
+
+   // &__link {
+   // }
+}
+.social-footer {
+
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+   }
+
+   &__item {
+      flex: 0 0 37px;
+      height: 37px;
+      border-radius: 10px;
+      transition: all 0.2s;
+      &:hover {
+         transform: scale(1.1);
+      }
+   }
+
+   // &__link {
+   // }
+
+   &__img-link {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+.download-apps {
+   width: 400px;
+   @media (max-width: 1114px) {
+      width: auto;
+   } 
+
+   &__title {
+      @extend %footer-titles;
+      @include adaptiveValue("margin-bottom", 35, 10);
+   }
+
+   &__items {
+      display: flex;
+      column-gap: 25px;
+      row-gap: 10px;
+      flex-wrap: wrap
+   }
+
+   &__item {
+      @extend %footer-items;
+   }
+
+   // &__img-link {
+   // }
+}
+.popular-categories {
+   @include adaptiveValue("padding-top", 20, 10);
+   @include adaptiveValue("padding-bottom", 20, 10);
+   @include adaptiveValue("padding-left", 85, 5, 0, $containerWidth, 768);
+   @include adaptiveValue("padding-right", 85, 5, 0, $containerWidth, 768);
+   border-top: 1px solid rgb(190, 188, 189, 0.4);
+   border-bottom: 1px solid rgb(190, 188, 189, 0.4);
+
+   display: flex;
+   flex-direction: column;
+   transition: all 0.3s ease;
+   gap: 0;
+   &.active {
+      gap: 35px;
+      }
+   
+   &__button {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      &.active .popular-categories__img {
+         transform: rotate(180deg);
+      }
+   }
+
+   &__title {
+      @extend %footer-titles;
+   }
+
+   &__img {
+      position: relative;
+      top: 10px;
+      width: 17px !important;
+      height: 17px !important;
+      overflow: hidden;
+      transition: all 0.3s ease;
+   }
+
+   &__body {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      &.active {
+         max-height: 100%;
+      }
+   }
+
+   // &__list {
+   // }
+
+   &__item {
+      @extend %footer-items;
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 25, 5);
+      }
+   }
+
+   // &__link {
+   // }
+}
+

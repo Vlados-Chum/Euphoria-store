@@ -1,0 +1,117 @@
+// BURGER-menu
+.header__burger {
+   display: none;
+
+   @media (max-width: toEm(767.98)) {
+      display: block;
+      flex-shrink: 0;
+      position: relative;
+      width: toRem(44);
+      height: toRem(44);
+      border-radius: toRem(8);
+      background-color: gainsboro;
+      z-index: 5;
+
+      @media (any-hover: none) {
+         cursor: default;
+      }
+
+      span,
+         &::before,
+         &::after {
+            content: "";
+            transition: all 0.1s ease 0s;
+            right: 15%;
+            position: absolute;
+            width: 70%;
+            height: toRem(2);
+            background-color: grey;
+         }
+
+         &::before {
+            top: toRem(12);
+         }
+
+         &::after {
+            bottom: toRem(12);
+         }
+
+      span {
+         top: calc(50% - toRem(1));
+      }
+
+      .burger-open & {
+         span {
+            width: 0;
+         }
+
+         &::before {
+            top: calc(50% - toRem(1));
+            transform: rotate(135deg);
+         }
+
+         &::after {
+            bottom: calc(50% - toRem(1));
+            transform: rotate(225deg);
+         }
+      }
+   }
+}
+
+.menu-header {
+      transition: all 0.3s ease;
+   
+      @media (max-width: toEm(767.98)) {
+         position: fixed;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: -100%;
+         background-color: #fff;
+         overflow-y: auto;
+      }
+   
+      .burger-open & {
+         left: 0;
+      }
+   }
+
+.menu-header__list {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   line-height: 1.2;
+   padding: toRem(10) toRem(0);
+   @include adaptiveValue('column-gap', 40, 10, 0, $containerWidth, 767.98);
+
+   @media (max-width: toEm(767.98)) {
+      flex-direction: column;
+      align-items: center;
+      line-height: 2;
+      padding: toRem(100) toRem(15) toRem(100);
+   }
+}
+   .menu-header__link {
+      position: relative;
+      font-size: toRem(22);
+      font-weight: 500;
+
+   &::before {
+      content: "";
+      height: toRem(3);
+      position: absolute;
+      background-color: blueviolet;
+      top: calc(100% + toRem(2));
+      left: 50%;
+      width: 0;
+      transition: all 0.3s;
+      border-radius: toRem(2);
+   }
+
+   &:hover {
+      &::before {
+         width: 100%;
+         left: 0;
+      }
+   }
+}
