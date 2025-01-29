@@ -2,7 +2,7 @@
 
 .hero {
    position: relative;
-   margin-bottom: 130px;
+   @include adaptiveValue("margin-bottom", 130, 70);
 
    &__wrapper {
    }
@@ -88,7 +88,7 @@
 
    &__label {
       font-family: "Core Sans C";
-      font-size: 32px;
+      @include adaptiveValue("font-size", 32, 22);
       font-weight: 500;
       line-height: 1.18;
       letter-spacing: 0.157px;
@@ -114,7 +114,7 @@
       color: #3C4242;
       text-align: center;
       font-family: 'Causten';
-      font-size: 24px;
+      @include adaptiveValue("font-size", 24, 18);
       font-weight: 700;
       transition: all 0.3s ease;
       &:hover {
@@ -152,7 +152,7 @@
 // EXPLORE
 
 .explore {
-   margin-bottom: 130px;
+   @include adaptiveValue("margin-bottom", 130, 70);
 
    &__container {
       display: grid;
@@ -233,13 +233,13 @@
 // NEW
 
 .new {
-   margin-bottom: 94px;
+   @include adaptiveValue("margin-bottom", 94, 60);
 
    &__container {
    }
 
    &__title {
-      @include adaptiveValue("font-size", 36, 20)
+      
    }
 
    &__swiper {
@@ -322,7 +322,7 @@
 // BIG SAVING
 
 .big {
-   margin-bottom: 100px; 
+   @include adaptiveValue("margin-bottom", 100, 70); 
 
    &__container {
    }
@@ -469,7 +469,7 @@
 // SHOP
 
 .shop {
-   margin-bottom: 100px;
+   @include adaptiveValue("margin-bottom", 100, 70);
 
    &__container {
       display: grid;
@@ -569,7 +569,7 @@
 // MEN
 
 .men {
-   margin-bottom: 100px;
+   @include adaptiveValue("margin-bottom", 100, 70);
 
    &__container {
    }
@@ -585,12 +585,16 @@
          justify-content: center;
       }
    }
+}
+
+.men__items .item-product:hover img {
+   transform: scale(1.15);
 }
 
 // WOMEN
 
 .women {
-   margin-bottom: 100px; 
+   @include adaptiveValue("margin-bottom", 100, 70); 
 
    &__container {
    }
@@ -608,16 +612,23 @@
    }
 }
 
+.women__items .item-product:hover img {
+   transform: scale(1.15);
+}
+
 // BRANDS
 
 .brands {
-   margin-bottom: 100px;
+   @include adaptiveValue("margin-bottom", 100, 70);
 
    &__container {
       border-radius: 12px;
       border: 1.069px solid #323232;
       background: #3C4242;
-      padding: 40px 124px 60px 124px !important;
+      padding: 40px 124px 60px 124px;
+      @media (max-width: 768px) {
+         padding: 30px 60px 40px 60px;
+      }
    }
 
    &__title {
@@ -673,7 +684,7 @@
 // LIMELIGHT
 
 .limelight {
-   margin-bottom: 100px;
+   @include adaptiveValue("margin-bottom", 100, 70);
 
    &__container {
    }
@@ -695,7 +706,7 @@
 // REVIEWS
 
 .reviews {
-   margin-bottom: 130px;
+   @include adaptiveValue("margin-bottom", 100, 70);
 
    &__container {
    }
@@ -746,6 +757,8 @@
    &__avatar {
       aspect-ratio: 1 / 1;
       flex: 0 0 58px;
+      width: 58px;
+      object-fit: cover;
    }
 
    &__img-avatar {

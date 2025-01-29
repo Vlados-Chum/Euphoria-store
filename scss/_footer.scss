@@ -87,8 +87,9 @@
       @include adaptiveValue("margin-bottom", 20, 5);
    }
 
-   // &__link {
-   // }
+   &__link:hover {
+      text-decoration: underline;
+   }
 }
 .social-footer {
 

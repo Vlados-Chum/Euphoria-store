@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	spollerButton.addEventListener("click", () => {
 	  spoller.classList.toggle("active");
 	  spollerButton.classList.toggle("active");
-	  spollerBody.classList.toggle("active")
+	  spollerBody.classList.toggle("active");
 	  
 	  if (spollerBody.classList.contains("active")) {
       spollerBody.style.maxHeight = spollerBody.scrollHeight + "px";
@@ -147,5 +147,45 @@ if(reviewsSlider) {
 			}
 		}
 	});
+}
 
+// RATE COUNT
+
+document.addEventListener("click", documentActions);
+
+function documentActions(e) {
+	const targetElement = e.target;
+
+	if (targetElement.closest('.rate__input')) {
+		const currentElement = targetElement.closest('.rate__input');
+		const currentParrentElement = targetElement.closest('.rate');
+		starRate(currentParrentElement, currentElement);
+	}
+}
+
+function starRate(currentParrentElement, currentElement) {
+
+	const rateItems = currentParrentElement.querySelectorAll('.rate__item');
+	
+	// для примера
+	const resultRate = +currentElement.value;
+
+	// для Бэк энда
+	// const rateValue = +currentElement.value;
+	// const resultRate = 3.7;
+
+	const resultInt = parseInt(resultRate);
+	const resultFloat = resultRate - resultInt;
+
+	rateItems.forEach((rateItem, index) => {
+		rateItem.classList.remove('active');
+		rateItem.querySelector('span')?.remove();
+
+		if (index <= (resultInt - 1)) {
+			rateItem.classList.add('active'); 
+		}
+		if (index === resultInt && resultFloat) {
+			rateItem.insertAdjacentHTML("beforeend", `<span style="width:${resultFloat * 100}%"></span>`);
+		}
+	});
 }

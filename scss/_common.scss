@@ -9,19 +9,19 @@
 .title {
    font-family: 'Core Sens C';
    font-weight: 600;
-   font-size: 36px;
+   @include adaptiveValue("font-size", 36, 24);
    letter-spacing: 0.68px;
    display: flex;
    justify-content: start;
    align-items: start;  
    gap: 20px;
    color: $mainFontColor;
-   margin-bottom: 70px;
+   @include adaptiveValue("margin-bottom", 70, 40);
    &::before {
       content: "";
       flex: 0 0 6px;
       width: 6px;
-      height: 30px;
+      @include adaptiveValue("height", 30, 20);
       border-radius: 10px;
       background-color: blueviolet;
    }
@@ -41,6 +41,7 @@
          height: 370px;
       }
    }
+
    &__picture-link {
       width: 100%;
       height: 393px;
@@ -50,6 +51,7 @@
 
    &__img {
       @extend %img;
+      transition: transform 0.3s ease;
       .item-product--category & {
           height: 393px;
       }
@@ -133,3 +135,69 @@
    }
 }
 
+
+// RATE
+
+.rate {
+   display: inline-block;
+
+   &__items {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 7px;
+      height: 20px;
+      &:hover {
+          .rate__item {
+            background: url("../img/icon/star-full.svg") 0 0 / 20px no-repeat;
+         }
+      }
+   }
+
+   &__item {
+      flex: 0 0 20px;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      background: url("../img/icon/star-empty.svg") 0 0 / 20px no-repeat;
+      &:active {
+         background: url("../img/icon/star-empty.svg") 0 0 / 20px no-repeat;
+      }
+      span {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 0%;
+         background: url("../img/icon/star-full.svg") 0 0 / 20px no-repeat;
+      }
+      &:hover {
+         ~ .rate__item {
+           background: url("../img/icon/star-empty.svg") 0 0 / 20px no-repeat;
+           span {
+             display: none;
+            }
+         }
+      }
+      &:not(:last-child) {
+         &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 7px;
+            transform: translateX(100%);
+         }
+      }
+   }
+
+   &__input {
+      aspect-ratio: 1 / 1;
+      width: 100%;
+      opacity: 0;
+      cursor: pointer;
+   }
+}
+
+.rate__item.active {
+   background: url("../img/icon/star-full.svg") no-repeat center/cover;
+}
