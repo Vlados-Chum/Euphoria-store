@@ -1,0 +1,278 @@
+
+.filter {
+   background-color: #FFF;
+   color: #8A8989;
+   font-weight: 600;
+   font-size: 16px;
+   font-family: 'Causten';
+   width: 295px;
+   height: 100%;
+	border: 1px solid #8A8989;
+   &.opened .filter__header {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #BEBCBD;
+   }
+
+	&__header {
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 20px 30px;
+	}
+
+	&__title,
+	.section-filter__title {
+      color: #807D7E;
+      font-size: 22px;
+      letter-spacing: 0.44px;
+		transition: all 0.3s ease;
+		&:hover {
+			color: black;
+		}
+	}
+	
+	&__img-header {
+      width: 17px;
+      height: 15px;
+      aspect-ratio: 17 / 15;
+      object-fit: cover;
+      overflow: hidden;
+	}
+	&__body {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      &.opened {
+         max-height: 100%;
+      }
+		
+	}
+	&__section {
+
+	}
+}
+.section-filter {
+	border-bottom: 1px solid #8A8989;
+
+	&__body {
+		padding: 0 30px;
+		&--filter {
+			margin: 40px 0;
+		}
+	}
+
+	&__menu {
+		
+	}
+	&__spoller {
+		// &.opened .section-filter__header {
+		// 	border-bottom: 1px solid #BEBCBD;
+
+		// }
+		&.opened .section-filter__img-header {
+			transform: rotate(180deg);
+		}
+
+		&.opened .section-filter__box-spoller {
+			height: auto;
+			opacity: 1;
+			padding-top: 40px;
+			padding-bottom: 100px;
+		}
+	}
+
+	&__header {
+		border-bottom: 1px solid transparent;
+		cursor: pointer;
+      display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+      padding: 20px 30px;
+		border-bottom: 1px solid #BEBCBD;
+	}
+
+	&__title {
+	}
+
+	&__img-header {
+		transition: transform 0.3s ease;
+	}
+
+	&__box-spoller {
+		height: 0;
+		opacity: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+	}
+
+	&__price {
+	}
+}
+
+.menu-filter {
+	padding-bottom: 40px;
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+		line-height: 1.2;
+		&:hover {
+			color: black;
+		}
+	}
+
+	&__title {
+		flex-grow: 1;
+	}
+
+	&__img-link {
+		&--black {
+			width: 15px;
+			height: 13px;
+			overflow: hidden;
+			display: none;
+		}
+	}
+}
+
+.price-filter {
+
+	&__range {
+		margin-bottom: 32px;
+	}
+
+	&__inputs {
+		display: flex;
+		gap: 30px;
+		justify-content: center;
+
+		
+	}
+	&__input {
+		border: 1px solid #BEBCBD;
+		border-radius: 8px;
+		text-align: center;
+		font-weight: 500;
+		color: #3C4242;
+		outline: none;
+		padding: 7px 0;
+		flex: 0 0 97px;
+		width: 97px;
+	}
+}
+
+.type-catalog {
+
+	&__item {
+	}
+	&__button {
+	}
+	&__button--active {
+	}
+}
+
+
+.colors-filter {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 18px;
+	padding-bottom: 80px;
+
+	&__item {
+	display: grid;
+	gap: 18px;
+	color: #8A8989;
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	&:focus-within {
+		outline: 1px solid blue;
+		border-radius: 2px;
+  }
+	
+	&:hover {
+		color: #000;
+	}
+		&::before {
+			content: "";
+			border-radius: 12px;
+			width: 36px;
+			aspect-ratio: 1 / 1;
+			background-color: var(--color);
+			transition: all 0.3s ease;
+		}
+		
+		&:has(input:checked) {
+			outline: 1px solid red;
+			border-radius: 2px;
+			}
+		&:hover {
+			&::before {
+				transform: scale(0.9);
+			}
+		}
+	}
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+}
+
+.sizes-filter {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	padding-bottom: 80px;
+
+
+	&__item {
+	cursor: pointer;
+	border-radius: 8px;
+	border: 1px solid #BEBCBD;
+	padding: 7px 17px;
+	font-size: 14px;
+	line-height: 1.2;
+	text-align: center;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+	
+		&:hover {
+			color: #000;
+			border-color: #000;
+		}
+
+		&:has(input:checked) {
+			background-color: #000;
+			color: #FFF;
+			}
+	} 
+
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+}

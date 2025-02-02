@@ -14,7 +14,7 @@ function documentActions(e) {
 }
 
 
-// SPOLLER
+// SPOLLER-FOOTER
 
 document.addEventListener("DOMContentLoaded", () => {
 	const spoller = document.querySelector(".popular-categories");
@@ -42,6 +42,66 @@ document.addEventListener("DOMContentLoaded", () => {
 // JavaScript:
 // При клике на кнопку добавляется/удаляется класс active для кнопки и блока контента.
 // Анимация поворота стрелки происходит за счёт добавления класса active у кнопки.
+
+
+// SPOLLER-FILTER
+
+document.addEventListener("DOMContentLoaded", () => {
+	const spoller = document.querySelector(".catalog__spoller-filter");
+	const spollerButton = document.querySelector(".filter__header");
+	const spollerBody = document.querySelector(".filter__body");
+ 
+	// Открываем спойлер по умолчанию
+	spoller.classList.add("opened");
+	spollerButton.classList.add("opened");
+	spollerBody.classList.add("opened");
+	spollerBody.style.maxHeight = spollerBody.scrollHeight + "px";
+
+	// Активируем спойлер
+	spollerButton.addEventListener("click", () => {
+	  spoller.classList.toggle("opened");
+	  spollerButton.classList.toggle("opened");
+	  spollerBody.classList.toggle("opened");
+	  
+	  if (spollerBody.classList.contains("opened")) {
+      spollerBody.style.maxHeight = spollerBody.scrollHeight + "px";
+    	} else {
+      spollerBody.style.maxHeight = 0;
+    };
+	});
+ });
+
+
+// SPOLLERS ALL ON THE PAGE
+
+document.addEventListener("DOMContentLoaded", () => {
+	const spollers = document.querySelectorAll(".section-filter__spoller");
+
+	spollers.forEach(spoller => {
+		 const spollerButton = spoller.querySelector(".section-filter__header");
+		 const spollerBody = spoller.querySelector(".section-filter__box-spoller");
+
+		 // Открываем спойлер по умолчанию
+		 spoller.classList.add("opened");
+		 spollerButton.classList.add("opened");
+		 spollerBody.classList.add("opened");
+		 spollerBody.style.maxHeight = spollerBody.scrollHeight + "px";
+
+		 // Активируем спойлер при клике
+		 spollerButton.addEventListener("click", () => {
+			  const isOpened = spoller.classList.toggle("opened");
+
+			  spollerButton.classList.toggle("opened");
+			  spollerBody.classList.toggle("opened");
+
+			  if (isOpened) {
+					spollerBody.style.maxHeight = spollerBody.scrollHeight + "px";
+			  } else {
+					spollerBody.style.maxHeight = "0px";
+			  }
+		 });
+	});
+});
 
 
 // SLIDER HERO
@@ -187,5 +247,41 @@ function starRate(currentParrentElement, currentElement) {
 		if (index === resultInt && resultFloat) {
 			rateItem.insertAdjacentHTML("beforeend", `<span style="width:${resultFloat * 100}%"></span>`);
 		}
+	});
+}
+
+
+// NOUISLIDER
+
+const filterRange = document.querySelector('.price-filter__range');
+
+if(filterRange) {
+	const filterRangeFrom = document.querySelector('.price-filter__input--from');
+	const filterRangeTo = document.querySelector('.price-filter__input--to');
+	noUiSlider.create(filterRange, {
+		start: [0, 1000],
+		connect: true,
+		range: {
+			'min': 0,
+			'max': 1000
+		},
+		// убираем десятичные у чисел и добавляем приставку валюты
+		format: wNumb({
+			prefix: '$',
+			decimals: 0,
+			thousand: ''
+		})
+	});
+	
+
+	filterRange.noUiSlider.on('update', function(values, handle) {
+		filterRangeFrom.value = `${values[0]}`,
+		filterRangeTo.value = `${values[1]}`
+	});
+	filterRangeFrom.addEventListener('change', function() {
+		filterRange.noUiSlider.setHandle(0, filterRangeValue);
+	});
+	filterRangeTo.addEventListener('change', function() {
+		filterRange.noUiSlider.setHandle(1, filterRangeValue);
 	});
 }

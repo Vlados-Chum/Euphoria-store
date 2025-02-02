@@ -5,7 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link
    rel="stylesheet"
-   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
    <link rel="stylesheet" href="css/style.css">
    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
    <title>Women's clothing</title>
@@ -14,7 +14,9 @@
    <div class="wrapper">
       <header class="header">
          <div class="header__container">
-            <img src="img/icon/logo-icon.png" alt="logo" class="header__logo">
+            <a href="index.html">
+               <img src="img/icon/logo-icon.png" alt="logo" class="header__logo">
+            </a>
             <div class="header__menu menu-header">
                <nav class="menu-header__nav">
                   <ul class="menu-header__list">
@@ -29,7 +31,7 @@
                         </a>
                      </li>
                      <li class="menu-header__item-list">
-                        <a href="#" class="menu-header__link">
+                        <a href="women.html" class="menu-header__link">
                            Women
                         </a>
                      </li>
@@ -77,6 +79,576 @@
          </div>
       </header>
       <main class="page">
+         <section class="page__catalog">
+            <div class="catalog__container">
+               <aside class="catalog__filter filter catalog__spoller-filter">
+                  <div class="filter__header">
+                     <h5 class="filter__title">
+                        Filter
+                     </h5>
+                     <img src="./img/pic/women's_clothing/icons/settings.png" alt="settings-img" class="filter__img-header">
+                  </div>
+                  <form class="filter__body">
+                     <div class="filter__section section-filter">
+                        <div class="section-filter__body section-filter__body--filter">
+                           <nav class="section-filter__menu menu-filter">
+                              <ul class="menu-filter__list">
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link">
+                                       <h5 class="menu-filter__title">
+                                          Tops
+                                       </h5>
+                                       <img src="./img/pic/women's_clothing/icons/shevron_right.png" alt="shevron" class="menu-filter__img-link">
+                                    </a>
+                                 </li>
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link">
+                                       <h5 class="menu-filter__title">
+                                          Printed T-shirts
+                                       </h5>
+                                       <img src="./img/pic/women's_clothing/icons/shevron_right.png" alt="shevron" class="menu-filter__img-link">
+                                    </a>
+                                 </li>
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link">
+                                       <h5 class="menu-filter__title">
+                                          Plain T-shirts
+                                       </h5>
+                                       <img src="./img/pic/women's_clothing/icons/shevron_right.png" alt="shevron" class="menu-filter__img-link">
+                                    </a>
+                                 </li>
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link">
+                                       <h5 class="menu-filter__title">
+                                          Kurti
+                                       </h5>
+                                       <img src="./img/pic/women's_clothing/icons/shevron_right.png" alt="shevron" class="menu-filter__img-link">
+                                    </a>
+                                 </li>
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link">
+                                       <h5 class="menu-filter__title">
+                                          Boxers
+                                       </h5>
+                                       <img src="./img/pic/women's_clothing/icons/shevron_right.png" alt="shevron" class="menu-filter__img-link">
+                                    </a>
+                                 </li>
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link">
+                                       <h5 class="menu-filter__title">
+                                          Full sleeve T-shirts
+                                       </h5>
+                                       <img src="./img/pic/women's_clothing/icons/shevron_right.png" alt="shevron" class="menu-filter__img-link">
+                                    </a>
+                                 </li>
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link">
+                                       <h5 class="menu-filter__title">
+                                          Joggers
+                                       </h5>
+                                       <img src="./img/pic/women's_clothing/icons/shevron_right.png" alt="shevron" class="menu-filter__img-link">
+                                    </a>
+                                 </li>
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link">
+                                       <h5 class="menu-filter__title">
+                                          Payjamas
+                                       </h5>
+                                       <img src="./img/pic/women's_clothing/icons/shevron_right.png" alt="shevron" class="menu-filter__img-link">
+                                    </a>
+                                 </li>
+                                 <li class="menu-filter__item">
+                                    <a href="#" class="menu-filter__link">
+                                       <h5 class="menu-filter__title">
+                                          Jeans
+                                       </h5>
+                                       <img src="./img/pic/women's_clothing/icons/shevron_right.png" alt="shevron" class="menu-filter__img-link">
+                                    </a>
+                                 </li>
+                              </ul>
+                           </nav>
+                        </div>
+                     </div>
+                     <div class="filter__section section-filter">
+                        <div class="section-filter__spoller">
+                           <div class="section-filter__header">
+                              <h5 class="section-filter__title">
+                                 Price
+                              </h5>
+                              <img src="./img/pic/women's_clothing/icons/shevron_up.png" alt="shevron-up" class="section-filter__img-header">
+                           </div>
+                           <div class="section-filter__body">
+                              <div class="section-filter__box-spoller">
+                                 <div class="section-filter__price price-filter">
+                                    <div class="price-filter__range"></div>
+                                    <div class="price-filter__inputs">
+                                       <input type="text" name="price-from" class="price-filter__input price-filter__input--from" placeholder="$70">
+                                       <input type="text" name="price-to" class="price-filter__input price-filter__input--to" placeholder="$600">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="filter__section section-filter">
+                        <div class="section-filter__spoller">
+                           <div class="section-filter__header">
+                              <h5 class="section-filter__title">
+                                 Colors
+                              </h5>
+                              <img src="./img/pic/women's_clothing/icons/shevron_up.png" alt="shevron-up" class="section-filter__img-header">
+                           </div>
+                           <div class="section-filter__body">
+                              <div class="section-filter__box-spoller">
+                                 <div class="section-filter__colors colors-filter">
+                                    <label style="--color: #8434E1" class="colors-filter__item">
+                                       <input type="checkbox" name="color[]" class="colors-filter__input">
+                                       Purple
+                                    </label>
+                                    <label style="--color: #252525" class="colors-filter__item">
+                                       <input type="checkbox" name="color[]" class="colors-filter__input">
+                                       Black
+                                    </label>
+                                    <label style="--color: #F35528" class="colors-filter__item">
+                                       <input type="checkbox" name="color[]" class="colors-filter__input">
+                                       Red
+                                    </label>
+                                    <label style="--color: #F16F2B" class="colors-filter__item">
+                                       <input type="checkbox" name="color[]" class="colors-filter__input">
+                                       Orange
+                                    </label>
+                                    <label style="--color: #345EFF" class="colors-filter__item">
+                                       <input type="checkbox" name="color[]" class="colors-filter__input">
+                                       Navy
+                                    </label>
+                                    <label style="--color: #FFF" class="colors-filter__item">
+                                       <input type="checkbox" name="color[]" class="colors-filter__input">
+                                       White
+                                    </label>
+                                    <label style="--color: #D67E3B" class="colors-filter__item">
+                                       <input type="checkbox" name="color[]" class="colors-filter__input">
+                                       Broom
+                                    </label>
+                                    <label style="--color: #48BC4E" class="colors-filter__item ">
+                                       <input type="checkbox" name="color[]" class="colors-filter__input">
+                                       Green
+                                    </label>
+                                    <label style="--color: #FDC761" class="colors-filter__item">
+                                       <input type="checkbox" name="color[]" class="colors-filter__input">
+                                       Yellow
+                                    </label>
+                                    <label style="--color: #E4E5E8" class="colors-filter__item">
+                                       <input type="checkbox" name="color[]" class="colors-filter__input">
+                                       Grey
+                                    </label>
+                                    <label style="--color: #E08D9D" class="colors-filter__item">
+                                       <input type="checkbox" name="color[]" class="colors-filter__input">
+                                       Pink
+                                    </label>
+                                    <label style="--color: #3FDEFF" class="colors-filter__item">
+                                       <input type="checkbox" name="color[]" class="colors-filter__input">
+                                       Blue
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="filter__section section-filter">
+                        <div class="section-filter__spoller">
+                           <div class="section-filter__header">
+                              <h5 class="section-filter__title">
+                                 Sizes
+                              </h5>
+                              <img src="./img/pic/women's_clothing/icons/shevron_up.png" alt="shevron-up" class="section-filter__img-header">
+                           </div>
+                           <div class="section-filter__body">
+                              <div class="section-filter__box-spoller">
+                                 <div class="section-filter__sizes sizes-filter">
+                                    <label class="sizes-filter__item">
+                                       <input type="checkbox" name="size[]" class="sizes-filter__input">
+                                       XXS
+                                    </label>
+                                    <label class="sizes-filter__item">
+                                       <input type="checkbox" name="size[]" class="sizes-filter__input">
+                                       XL
+                                    </label>
+                                    <label class="sizes-filter__item">
+                                       <input type="checkbox" name="size[]" class="sizes-filter__input">
+                                       XS
+                                    </label>
+                                    <label class="sizes-filter__item">
+                                       <input type="checkbox" name="size[]" class="sizes-filter__input">
+                                       S
+                                    </label>
+                                    <label class="sizes-filter__item">
+                                       <input type="checkbox" name="size[]" class="sizes-filter__input">
+                                       M
+                                    </label>
+                                    <label class="sizes-filter__item">
+                                       <input type="checkbox" name="size[]" class="sizes-filter__input">
+                                       L
+                                    </label>
+                                    <label class="sizes-filter__item">
+                                       <input type="checkbox" name="size[]" class="sizes-filter__input">
+                                       XXL
+                                    </label>
+                                    <label class="sizes-filter__item">
+                                       <input type="checkbox" name="size[]" class="sizes-filter__input">
+                                       3XL
+                                    </label>
+                                    <label class="sizes-filter__item">
+                                       <input type="checkbox" name="size[]" class="sizes-filter__input">
+                                       4XL
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="filter__section section-filter">
+                        <div class="section-filter__spoller">
+                           <div class="section-filter__header">
+                              <h5 class="section-filter__title">
+                                 Dress Style
+                              </h5>
+                              <img src="./img/pic/women's_clothing/icons/shevron_up.png" alt="shevron-up" class="section-filter__img-header">
+                           </div>
+                           <div class="section-filter__body section-filter__body">
+                              <div class="section-filter__box-spoller">
+                                 <nav class="section-filter__menu menu-filter">
+                                    <ul class="menu-filter__list">
+                                       <li class="menu-filter__item">
+                                          <a href="#" class="menu-filter__link">
+                                             <h5 class="menu-filter__title">
+                                                Classic
+                                             </h5>
+                                             <img src="./img/pic/women's_clothing/icons/shevron_right.png" alt="shevron" class="menu-filter__img-link">
+                                          </a>
+                                       </li>
+                                       <li class="menu-filter__item">
+                                          <a href="#" class="menu-filter__link">
+                                             <h5 class="menu-filter__title">
+                                                Casual
+                                             </h5>
+                                             <img src="./img/pic/women's_clothing/icons/shevron_right.png" alt="shevron" class="menu-filter__img-link">
+                                          </a>
+                                       </li>
+                                       <li class="menu-filter__item">
+                                          <a href="#" class="menu-filter__link">
+                                             <h5 class="menu-filter__title">
+                                                Business
+                                             </h5>
+                                             <img src="./img/pic/women's_clothing/icons/shevron_right.png" alt="shevron" class="menu-filter__img-link">
+                                          </a>
+                                       </li>
+                                       <li class="menu-filter__item">
+                                          <a href="#" class="menu-filter__link">
+                                             <h5 class="menu-filter__title">
+                                                Sport
+                                             </h5>
+                                             <img src="./img/pic/women's_clothing/icons/shevron_right.png" alt="shevron" class="menu-filter__img-link">
+                                          </a>
+                                       </li>
+                                       <li class="menu-filter__item">
+                                          <a href="#" class="menu-filter__link">
+                                             <h5 class="menu-filter__title">
+                                                Elegant
+                                             </h5>
+                                             <img src="./img/pic/women's_clothing/icons/shevron_right.png" alt="shevron" class="menu-filter__img-link">
+                                          </a>
+                                       </li>
+                                       <li class="menu-filter__item">
+                                          <a href="#" class="menu-filter__link">
+                                             <h5 class="menu-filter__title">
+                                                Formal (evening)
+                                             </h5>
+                                             <img src="./img/pic/women's_clothing/icons/shevron_right.png" alt="shevron" class="menu-filter__img-link">
+                                          </a>
+                                       </li>
+                                    </ul>
+                                 </nav>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </aside>
+               <div class="catalog__body">
+                     <div class="catalog__header">
+                        <h1 class="catalog__title">
+                           Women's Clothing
+                        </h1>
+                        <ul class="catalog__type type-catalog">
+                           <li class="type-catalog__item">
+                              <button class="type-catalog__button type-catalog__button--active">
+                                 New
+                              </button>
+                           </li>
+                           <li class="type-catalog__item">
+                              <button class="type-catalog__button">
+                                 Recommended
+                              </button>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="catalog__items">
+                        <article class="item-product">
+                           <a href="#" class="item-product__favorite">
+                              <img src="./img/icon/heart-pic.svg" alt="heart" class="item-product__img-favorite">
+                           </a>
+                           <a href="#" class="item-product__picture-link">
+                              <img src="./img/pic/men-one.webp" alt="product-picture" class="item-product__img">
+                           </a>
+                           <div class="item-product__body">
+                              <h4 class="item-product__title">
+                                 <a href="#" class="item-product__link-title">
+                                    Shirts
+                                 </a>
+                              </h4>
+                              <div class="item-product__label">
+                                 Explore Now!
+                              </div>
+                              <div class="item-product__price">
+                              $13.00
+                              </div>
+                           </div>
+                         </article>
+                         <article class="item-product">
+                           <a href="#" class="item-product__favorite">
+                              <img src="./img/icon/heart-pic.svg" alt="heart" class="item-product__img-favorite">
+                           </a>
+                           <a href="#" class="item-product__picture-link">
+                              <img src="./img/pic/men-one.webp" alt="product-picture" class="item-product__img">
+                           </a>
+                           <div class="item-product__body">
+                              <h4 class="item-product__title">
+                                 <a href="#" class="item-product__link-title">
+                                    Shirts
+                                 </a>
+                              </h4>
+                              <div class="item-product__label">
+                                 Explore Now!
+                              </div>
+                              <div class="item-product__price">
+                              $13.00
+                              </div>
+                           </div>
+                         </article>
+                        <article class="item-product">
+                          <a href="#" class="item-product__favorite">
+                             <img src="./img/icon/heart-pic.svg" alt="heart" class="item-product__img-favorite">
+                          </a>
+                          <a href="#" class="item-product__picture-link">
+                             <img src="./img/pic/men-one.webp" alt="product-picture" class="item-product__img">
+                          </a>
+                          <div class="item-product__body">
+                             <h4 class="item-product__title">
+                                <a href="#" class="item-product__link-title">
+                                   Shirts
+                                </a>
+                             </h4>
+                             <div class="item-product__label">
+                                Explore Now!
+                             </div>
+                             <div class="item-product__price">
+                             $13.00
+                             </div>
+                          </div>
+                        </article>
+                         <article class="item-product">
+                           <a href="#" class="item-product__favorite">
+                              <img src="./img/icon/heart-pic.svg" alt="heart" class="item-product__img-favorite">
+                           </a>
+                           <a href="#" class="item-product__picture-link">
+                              <img src="./img/pic/men-one.webp" alt="product-picture" class="item-product__img">
+                           </a>
+                           <div class="item-product__body">
+                              <h4 class="item-product__title">
+                                 <a href="#" class="item-product__link-title">
+                                    Shirts
+                                 </a>
+                              </h4>
+                              <div class="item-product__label">
+                                 Explore Now!
+                              </div>
+                              <div class="item-product__price">
+                              $13.00
+                              </div>
+                           </div>
+                         </article>
+                         <article class="item-product">
+                           <a href="#" class="item-product__favorite">
+                              <img src="./img/icon/heart-pic.svg" alt="heart" class="item-product__img-favorite">
+                           </a>
+                           <a href="#" class="item-product__picture-link">
+                              <img src="./img/pic/men-one.webp" alt="product-picture" class="item-product__img">
+                           </a>
+                           <div class="item-product__body">
+                              <h4 class="item-product__title">
+                                 <a href="#" class="item-product__link-title">
+                                    Shirts
+                                 </a>
+                              </h4>
+                              <div class="item-product__label">
+                                 Explore Now!
+                              </div>
+                              <div class="item-product__price">
+                              $13.00
+                              </div>
+                           </div>
+                         </article>
+                         <article class="item-product">
+                           <a href="#" class="item-product__favorite">
+                              <img src="./img/icon/heart-pic.svg" alt="heart" class="item-product__img-favorite">
+                           </a>
+                           <a href="#" class="item-product__picture-link">
+                              <img src="./img/pic/men-one.webp" alt="product-picture" class="item-product__img">
+                           </a>
+                           <div class="item-product__body">
+                              <h4 class="item-product__title">
+                                 <a href="#" class="item-product__link-title">
+                                    Shirts
+                                 </a>
+                              </h4>
+                              <div class="item-product__label">
+                                 Explore Now!
+                              </div>
+                              <div class="item-product__price">
+                              $13.00
+                              </div>
+                           </div>
+                         </article>
+                         <article class="item-product">
+                           <a href="#" class="item-product__favorite">
+                              <img src="./img/icon/heart-pic.svg" alt="heart" class="item-product__img-favorite">
+                           </a>
+                           <a href="#" class="item-product__picture-link">
+                              <img src="./img/pic/men-one.webp" alt="product-picture" class="item-product__img">
+                           </a>
+                           <div class="item-product__body">
+                              <h4 class="item-product__title">
+                                 <a href="#" class="item-product__link-title">
+                                    Shirts
+                                 </a>
+                              </h4>
+                              <div class="item-product__label">
+                                 Explore Now!
+                              </div>
+                              <div class="item-product__price">
+                              $13.00
+                              </div>
+                           </div>
+                         </article>
+                         <article class="item-product">
+                           <a href="#" class="item-product__favorite">
+                              <img src="./img/icon/heart-pic.svg" alt="heart" class="item-product__img-favorite">
+                           </a>
+                           <a href="#" class="item-product__picture-link">
+                              <img src="./img/pic/men-one.webp" alt="product-picture" class="item-product__img">
+                           </a>
+                           <div class="item-product__body">
+                              <h4 class="item-product__title">
+                                 <a href="#" class="item-product__link-title">
+                                    Shirts
+                                 </a>
+                              </h4>
+                              <div class="item-product__label">
+                                 Explore Now!
+                              </div>
+                              <div class="item-product__price">
+                              $13.00
+                              </div>
+                           </div>
+                         </article>
+                         <article class="item-product">
+                           <a href="#" class="item-product__favorite">
+                              <img src="./img/icon/heart-pic.svg" alt="heart" class="item-product__img-favorite">
+                           </a>
+                           <a href="#" class="item-product__picture-link">
+                              <img src="./img/pic/men-one.webp" alt="product-picture" class="item-product__img">
+                           </a>
+                           <div class="item-product__body">
+                              <h4 class="item-product__title">
+                                 <a href="#" class="item-product__link-title">
+                                    Shirts
+                                 </a>
+                              </h4>
+                              <div class="item-product__label">
+                                 Explore Now!
+                              </div>
+                              <div class="item-product__price">
+                              $13.00
+                              </div>
+                           </div>
+                         </article>
+                         <article class="item-product">
+                           <a href="#" class="item-product__favorite">
+                              <img src="./img/icon/heart-pic.svg" alt="heart" class="item-product__img-favorite">
+                           </a>
+                           <a href="#" class="item-product__picture-link">
+                              <img src="./img/pic/men-one.webp" alt="product-picture" class="item-product__img">
+                           </a>
+                           <div class="item-product__body">
+                              <h4 class="item-product__title">
+                                 <a href="#" class="item-product__link-title">
+                                    Shirts
+                                 </a>
+                              </h4>
+                              <div class="item-product__label">
+                                 Explore Now!
+                              </div>
+                              <div class="item-product__price">
+                              $13.00
+                              </div>
+                           </div>
+                         </article>
+                         <article class="item-product">
+                           <a href="#" class="item-product__favorite">
+                              <img src="./img/icon/heart-pic.svg" alt="heart" class="item-product__img-favorite">
+                           </a>
+                           <a href="#" class="item-product__picture-link">
+                              <img src="./img/pic/men-one.webp" alt="product-picture" class="item-product__img">
+                           </a>
+                           <div class="item-product__body">
+                              <h4 class="item-product__title">
+                                 <a href="#" class="item-product__link-title">
+                                    Shirts
+                                 </a>
+                              </h4>
+                              <div class="item-product__label">
+                                 Explore Now!
+                              </div>
+                              <div class="item-product__price">
+                              $13.00
+                              </div>
+                           </div>
+                         </article>
+                         <article class="item-product">
+                           <a href="#" class="item-product__favorite">
+                              <img src="./img/icon/heart-pic.svg" alt="heart" class="item-product__img-favorite">
+                           </a>
+                           <a href="#" class="item-product__picture-link">
+                              <img src="./img/pic/men-one.webp" alt="product-picture" class="item-product__img">
+                           </a>
+                           <div class="item-product__body">
+                              <h4 class="item-product__title">
+                                 <a href="#" class="item-product__link-title">
+                                    Shirts
+                                 </a>
+                              </h4>
+                              <div class="item-product__label">
+                                 Explore Now!
+                              </div>
+                              <div class="item-product__price">
+                              $13.00
+                              </div>
+                           </div>
+                         </article>
+                     </div>
+               </div>
+            </div>
+         </section>
          
       </main>
       <footer class="footer">
@@ -259,7 +831,8 @@
          </div>
       </footer>
    </div>
-   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="js/wNumb.js"></script>
+   <script src="js/nouislider.min.js"></script>
    <script src="js/script.js"></script>
 </body>
 </html>
