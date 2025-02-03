@@ -309,6 +309,7 @@ textarea {
   text-decoration: underline;
 }
 .item-product__link-title {
+  width: 168px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -3017,7 +3018,6 @@ textarea {
   margin-bottom: 50px;
 }
 .catalog__title {
-  font-size: 22px;
   color: #3F4646;
   font-size: 22px;
   font-weight: 600;
@@ -3039,15 +3039,16 @@ textarea {
           column-gap: 24px;
   row-gap: 50px;
 }
-.catalog .type-catalog__button {
-  font-size: 22px;
+
+.type-catalog__button {
   color: #3F4646;
   font-size: 22px;
   font-weight: 600;
 }
-.catalog .type-catalog__button:hover {
+.type-catalog__button:hover {
   color: rgb(138, 51, 253);
 }
+
 .filter {
   background-color: #FFF;
   color: #8A8989;
@@ -3106,7 +3107,7 @@ textarea {
 .filter__body.opened {
   max-height: 100%;
 }
-.section-filter {
+.section-filter:first-child {
   border-bottom: 1px solid #8A8989;
 }
 .section-filter__body {
@@ -3114,6 +3115,9 @@ textarea {
 }
 .section-filter__body--filter {
   margin: 40px 0;
+}
+.section-filter__spoller.opened .section-filter__body {
+  border-bottom: 1px solid #BEBCBD;
 }
 .section-filter__spoller.opened .section-filter__img-header {
   -webkit-transform: rotate(180deg);
