@@ -3,9 +3,9 @@
 
 // BURGER
 
-document.addEventListener("click", documentActions);
+document.addEventListener("click", handleClick);
 
-function documentActions(e) {
+function handleClick(e) {
 	const targetElement = e.target;
 
 	if (targetElement.closest('.header__burger')) {
@@ -272,7 +272,6 @@ if(filterRange) {
 			thousand: ''
 		})
 	});
-	
 
 	filterRange.noUiSlider.on('update', function(values, handle) {
 		filterRangeFrom.value = `${values[0]}`,
@@ -284,4 +283,108 @@ if(filterRange) {
 	filterRangeTo.addEventListener('change', function() {
 		filterRange.noUiSlider.setHandle(1, filterRangeValue);
 	});
+}
+
+// THUMBS SLIDER
+
+document.addEventListener("DOMContentLoaded", function () {
+
+if(document.querySelector('.main-product__thumbs') && document.querySelector('.main-product__slider')) {
+   // Миниатюры
+   const thumbsSwiper = new Swiper(".main-product__thumbs", {
+   	slidesPerView: 3,
+   	freeMode: true,
+   	watchSlidesProgress: true,
+   	direction: "vertical",
+		loop: true,
+	// 	navigation: {
+	// 		nextEl: ".swiper-button-next",
+	// 		prevEl: ".swiper-button-prev",
+	//   },
+   });
+
+   // Основной слайдер
+   const mainSwiper = new Swiper(".main-product__slider", {
+		 slidesPerView: 1,
+		 loop: true,
+		 navigation: {
+			nextEl: ".swiper-button-prev",
+			prevEl: ".swiper-button-next",
+	  },
+       
+       thumbs: {
+           swiper: thumbsSwiper, // Привязываем миниатюры
+       },
+   });
+}
+
+});
+
+
+// TABS
+
+// document.addEventListener("click", tabsClick);
+
+// function tabsClick(e) {
+// 	const targetElement = e.target;
+
+// 	if (targetElement.closest('[data-tabs-button]')) {
+// 		const currentElement = targetElement.closest('[data-tabs-button]');
+// 		setTab(currentElement);
+// 	}
+// }
+
+// function setTab(tabElement){
+// 	const TabsParent = tabElement.closest('[data-tabs]');
+
+// 	const tabsButtons = Array.from(TabsParent.querySelectorAll('[data-tabs-button]'));
+// 	const tabsActiveButton = TabsParent.querySelector('[data-tabs-button].active');
+// 	tabsActiveButton.classList.remove('active');
+// 	tabElement.classList.add('active');
+
+// 	const currentButtonIndex = tabsButtons.indexOf(tabElement);
+
+// 	const tabsElements = TabsParent.querySelectorAll('[data-tabs-element]');
+
+// 	tabsElements.forEach(tabElement => {
+// 		tabElement.hidden = true
+// 	});
+
+// 	tabsElements[currentButtonIndex].hidden = false;
+// }
+
+document.addEventListener("click", tabsClick);
+
+function tabsClick(e) {
+    const targetElement = e.target;
+    
+    if (targetElement.closest('[data-tabs-button]')) {
+        const currentElement = targetElement.closest('[data-tabs-button]');
+        setTab(currentElement);
+    }
+}
+
+function setTab(tabElement) {
+    const TabsParent = tabElement.closest('[data-tabs]');
+    if (!TabsParent) return;
+
+    const tabsButtons = Array.from(TabsParent.querySelectorAll('[data-tabs-button]'));
+    const tabsActiveButton = TabsParent.querySelector('[data-tabs-button].active');
+
+    if (tabsActiveButton) {
+        tabsActiveButton.classList.remove('active');
+    }
+
+    tabElement.classList.add('active');
+    const currentButtonIndex = tabsButtons.indexOf(tabElement);
+
+    const tabsElements = TabsParent.querySelectorAll('[data-tabs-element]');
+
+    tabsElements.forEach(tabElement => {
+        tabElement.hidden = true;
+    });
+
+    if (tabsElements[currentButtonIndex]) {
+        tabsElements[currentButtonIndex].hidden = false;
+    }
 }

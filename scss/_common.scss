@@ -32,7 +32,7 @@
 .item-product {
    position: relative;
    display: grid;
-   width: 282px;
+   max-width: 282px;
    gap: 30px;
    &--category {
       gap: 25px;
@@ -140,7 +140,10 @@
 // RATE
 
 .rate {
-   display: inline-block;
+   
+   display: inline-flex;
+   gap: 10px;
+   align-items: center;
 
    &__items {
       display: inline-flex;
@@ -196,6 +199,10 @@
       width: 100%;
       opacity: 0;
       cursor: pointer;
+   }
+
+   &__value {
+
    }
 }
 

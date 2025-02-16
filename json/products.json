@@ -1,0 +1,30 @@
+{"products":[{
+   "id": 1,
+   "favorite": true,
+   "image": "img/pic/men-one.webp",
+   "title": "Shirts",
+   "label": "Explor Now!",
+   "price": "$13.00"
+},{
+   "id": 2,
+   "favorite": false,
+   "image": "img/pic/men-two.webp",
+   "title": "Shirts",
+   "label": "Explor Now!",
+   "price": "$13.00"
+},{
+   "id": 3,
+   "favorite": false,
+   "image": "img/pic/men-three.webp",
+   "title": "Shirts",
+   "label": "Explor Now!",
+   "price": "$13.00"
+},{
+   "id": 4,
+   "favorite": false,
+   "image": "img/pic/men-four.webp",
+   "title": "Shirts",
+   "label": "Explor Now!",
+   "price": "$13.00"
+}]
+}
