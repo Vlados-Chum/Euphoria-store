@@ -248,6 +248,8 @@ textarea {
   display: grid;
   max-width: 282px;
   gap: 30px;
+  align-self: center;
+  justify-self: center;
 }
 .item-product--category {
   gap: 25px;
