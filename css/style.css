@@ -4498,7 +4498,9 @@ textarea {
   font-family: "Causten";
   width: 295px;
   height: 100%;
-  border: 1px solid #8A8989;
+  border-bottom: 1px solid #8A8989;
+  border-left: 1px solid #8A8989;
+  border-right: 1px solid #8A8989;
 }
 .filter.opened .filter__header {
   padding-bottom: 20px;
@@ -4546,7 +4548,7 @@ textarea {
   transition: all 0.3s ease;
 }
 .filter__body.opened {
-  max-height: 100%;
+  max-height: 100% !important;
 }
 .section-filter:first-child {
   border-bottom: 1px solid #8A8989;
@@ -4555,7 +4557,7 @@ textarea {
   padding: 0 30px;
 }
 .section-filter__body--filter {
-  margin: 40px 0;
+  margin-top: 40px;
 }
 .section-filter__spoller.opened .section-filter__body {
   border-bottom: 1px solid #BEBCBD;
