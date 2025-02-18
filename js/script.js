@@ -69,12 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
       spollerBody.style.maxHeight = 0;
     };
 	});
- });
 
+	// SPOLLERS ALL ON THE PAGE
 
-// SPOLLERS ALL ON THE PAGE
-
-document.addEventListener("DOMContentLoaded", () => {
 	const spollers = document.querySelectorAll(".section-filter__spoller");
 
 	spollers.forEach(spoller => {
@@ -95,14 +92,13 @@ document.addEventListener("DOMContentLoaded", () => {
 			  spollerBody.classList.toggle("opened");
 
 			  if (isOpened) {
-					spollerBody.style.maxHeight = spollerBody.scrollHeight + "px";
+				spollerBody.style.maxHeight = spollerBody.scrollHeight + spollerBody.offsetHeight + "px";
 			  } else {
 					spollerBody.style.maxHeight = "0px";
 			  }
 		 });
 	});
-});
-
+ });
 
 // SLIDER HERO
 
