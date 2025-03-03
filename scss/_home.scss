@@ -927,10 +927,9 @@
       //    transition-delay: 0.3s;
       //    transform: translateY(0);
       // }
-      animation: fallBounce 1.5s ease-out 1.3s forwards;
+      animation: fallBounce 1.5s ease-out 2.5s forwards;
       &.visible {
          opacity: 1;
-
       }
    }
 
