@@ -895,6 +895,9 @@
       justify-content: space-between;
       gap: 20px;
       align-items: flex-start;
+      @media (max-width:500px) {
+         flex-direction: column;
+      }
    }
 
    &__avatar {
@@ -918,14 +921,13 @@
    &__rate {
       opacity: 0;
       transform: translateY(-100px);
-      transition-delay: 1s;
-      transition: opacity 0.6s ease;
+      // transition: opacity 0.3s ease;
       // &.visible {
       //    opacity: 1;
       //    transition-delay: 0.3s;
       //    transform: translateY(0);
       // }
-      animation: fallBounce 1.5s ease-out 1s forwards;
+      animation: fallBounce 1.5s ease-out 1.3s forwards;
       &.visible {
          opacity: 1;
 

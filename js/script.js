@@ -109,7 +109,7 @@ if(heroSlider) {
 	const swiper = new Swiper('.hero', {
 		loop: true,
 		autoheight: true,
-		speed: 800,
+		speed: 1000,
 		parallax: true, //добавляет эффект параллакса с добавлением на элемент слайдера атрибута data-swiper-parallax="80%"
 	
 		pagination: {
@@ -192,7 +192,7 @@ if(reviewsSlider) {
 				spaceBetween: 18
 			}, 
 
-			550: {
+			650: {
 				slidesPerView: 2,
 				spaceBetween: 20
 			},
