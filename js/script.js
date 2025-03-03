@@ -384,3 +384,32 @@ function setTab(tabElement) {
         tabsElements[currentButtonIndex].hidden = false;
     }
 }
+
+// ЭФФЕКТ ПОЯВЛЕНИЯ ПРИ СКРОЛЛЕ
+document.addEventListener('DOMContentLoaded', isInViewport);
+
+// Функция для проверки видимости элемента
+function isInViewport(element) {
+	const rect = element.getBoundingClientRect();
+	return (
+		 rect.top <= window.innerHeight &&
+		 rect.bottom >= 0
+	);
+}
+
+// Обработчик для скролла
+function handleScroll() {
+	const hiddenElements = document.querySelectorAll('.hidden');
+	hiddenElements.forEach(element => {
+		 if (isInViewport(element)) {
+			  element.classList.add('visible'); // Добавляем класс для анимации
+			  element.classList.remove('hidden'); // Убираем "скрытость"
+		 }
+	});
+}
+
+// Привязываем обработчик к событию scroll
+window.addEventListener('scroll', handleScroll);
+
+// Инициализация: вызываем handleScroll, чтобы проверить элементы, уже видимые на экране
+handleScroll();

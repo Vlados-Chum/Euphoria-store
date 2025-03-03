@@ -25,6 +25,15 @@
       border-radius: 10px;
       background-color: blueviolet;
    }
+
+   opacity: 0;
+      transform: translateX(-150px);
+      transition: opacity 0.6s ease, transform 0.9s ease;
+   
+      &.visible {
+         opacity: 1;
+         transform: translateX(0);
+      }
 }
 
 // PRODUCT CARD

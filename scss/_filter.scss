@@ -68,6 +68,9 @@
 		&--filter {
 			margin-top: 40px;
 		}
+		&--last {
+			padding-bottom: 40px;
+		}
 	}
 
 	&__menu {
@@ -161,6 +164,8 @@
 
 	&__range {
 		margin-bottom: 32px;
+		padding-left: 8px;
+		padding-right: 6px;
 	}
 
 	&__inputs {
@@ -199,6 +204,8 @@
 	grid-template-columns: repeat(4, 1fr);
 	gap: 18px;
 	padding-bottom: 80px;
+	padding-left: 2px;
+	padding-right: 2px;
 
 	&__item {
 	display: grid;
@@ -214,7 +221,7 @@
 	
 	&:focus-within {
 		outline: 1px solid blue;
-		border-radius: 2px;
+		border-radius: 12px 12px 4px 4px;
   }
 	
 	&:hover {
@@ -231,7 +238,7 @@
 		
 		&:has(input:checked) {
 			outline: 1px solid red;
-			border-radius: 2px;
+			border-radius: 12px 12px 4px 4px;
 			}
 		&:hover {
 			&::before {
@@ -283,3 +290,4 @@
 		opacity: 0;
 	}
 }
+

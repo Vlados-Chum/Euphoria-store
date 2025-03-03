@@ -81,15 +81,15 @@
             <div class="hero__wrapper swiper-wrapper">
                <div class="hero__slide slide-hero swiper-slide">
                   <div class="slide-hero__container">
-                     <div class="slide-hero__body">
-                        <div class="slide-hero__label">
+                     <div class="slide-hero__body hidden">
+                        <div data-swiper-parallax-x="-80%" class="slide-hero__label">
                            T-shirt / Tops
                         </div>
-                        <h2 data-swiper-parallax="-100%"  class="slide-hero__title">
+                        <h2 data-swiper-parallax-x="30%"  class="slide-hero__title">
                            Summer <br>
                            Value Pack
                         </h2>
-                        <div class="slide-hero__label">
+                        <div data-swiper-parallax-x="-80%" class="slide-hero__label">
                            cool / colorful / comfy
                         </div>
                         <a href="#" class="slide-hero__button button button--white">
@@ -102,13 +102,13 @@
                <div class="hero__slide slide-hero swiper-slide">
                   <div class="slide-hero__container">
                      <div class="slide-hero__body">
-                        <div class="slide-hero__label">
+                        <div data-swiper-parallax-x="-80%" class="slide-hero__label">
                            T-shirt / Tops
                         </div>
-                        <h2 data-swiper-parallax="-100%" class="slide-hero__title">
+                        <h2 data-swiper-parallax-x="30%" class="slide-hero__title">
                            Some <br>Other Text
                         </h2>
-                        <div class="slide-hero__label">
+                        <div data-swiper-parallax-x="-80%" class="slide-hero__label">
                            cool / colorful / comfy
                         </div>
                         <a href="#" class="slide-hero__button button button--white">
@@ -121,13 +121,13 @@
                <div class="hero__slide slide-hero swiper-slide">
                   <div class="slide-hero__container">
                      <div class="slide-hero__body">
-                        <div class="slide-hero__label">
+                        <div data-swiper-parallax-x="-80%" class="slide-hero__label">
                            T-shirt / Tops
                         </div>
-                        <h2 data-swiper-parallax="-100%"  class="slide-hero__title">
+                        <h2 data-swiper-parallax-x="30%"  class="slide-hero__title">
                            Some <br>Other Text
                         </h2>
-                        <div class="slide-hero__label">
+                        <div data-swiper-parallax-x="-80%" class="slide-hero__label">
                            cool / colorful / comfy
                         </div>
                         <a href="#" class="slide-hero__button button button--white">
@@ -140,13 +140,13 @@
                <div class="hero__slide slide-hero swiper-slide">
                   <div class="slide-hero__container">
                      <div class="slide-hero__body">
-                        <div class="slide-hero__label">
+                        <div data-swiper-parallax-x="-80%" class="slide-hero__label">
                            T-shirt / Tops
                         </div>
-                        <h2 data-swiper-parallax="-100%"  class="slide-hero__title">
+                        <h2 data-swiper-parallax-x="30%"  class="slide-hero__title">
                            Some <br>Other Text
                         </h2>
-                        <div class="slide-hero__label">
+                        <div data-swiper-parallax-x="-80%" class="slide-hero__label">
                            cool / colorful / comfy
                         </div>
                         <a href="#" class="slide-hero__button button button--white">
@@ -170,7 +170,7 @@
          </section>
          <div class="explore">
             <div class="explore__container">
-               <article class="explore__item">
+               <article class="explore__item explore__item--left hidden">
                   <div class="explore__content">
                      <div class="explore__label">
                         Low Price
@@ -187,7 +187,8 @@
                   </div>
                   <img src="./img/pic/shop-left.webp" alt="girl" class="explore__img">
                </article>
-               <article class="explore__item">
+               <article class="explore__item
+               explore__item--right hidden">
                   <div class="explore__content">
                      <div class="explore__label">
                         Beyoung Presents
@@ -208,12 +209,12 @@
          </div>
          <section class="new">
             <div class="new__container">
-               <h2 class="new__title title">
+               <h2 class="new__title title hidden">
                   New Arrival
                </h2>
-               <div class="new__swiper swiper">
+               <div class="new__swiper swiper hidden">
                   <div class="new__wrapper swiper-wrapper">
-                     <div class="new__slide swiper-slide">
+                     <div class="new__slide swiper-slide new__slide--one hidden">
                         <article class="new__item item-new">
                            <a href="#" class="item-new__link">
                               <img src="./img/pic/new-one.webp" alt="product" class="item-new__img">
@@ -223,7 +224,7 @@
                            </a>
                         </article>
                      </div>
-                     <div class="new__slide swiper-slide">
+                     <div class="new__slide swiper-slide new__slide--two hidden">
                         <article class="new__item item-new">
                            <a href="#" class="item-new__link">
                               <img src="./img/pic/new-two.webp" alt="product" class="item-new__img">
@@ -233,7 +234,7 @@
                            </a>
                         </article>
                      </div>
-                     <div class="new__slide swiper-slide">
+                     <div class="new__slide swiper-slide new__slide--three hidden">
                         <article class="new__item item-new">
                            <a href="#" class="item-new__link">
                               <img src="./img/pic/new-three.webp" alt="product" class="item-new__img">
@@ -243,7 +244,7 @@
                            </a>
                         </article>
                      </div>
-                     <div class="new__slide swiper-slide">
+                     <div class="new__slide swiper-slide new__slide--four hidden">
                         <article class="new__item item-new">
                            <a href="#" class="item-new__link">
                               <img src="./img/pic/new-four.webp" alt="product" class="item-new__img">
@@ -275,7 +276,7 @@
          </section>
          <section class="big">
             <div class="big__container">
-               <h2 class="big__title title">
+               <h2 class="big__title title hidden">
                   Big Saving Zone
                </h2>
                <div class="big__items">
@@ -397,9 +398,9 @@
          </section>
          <section class="shop">
             <div class="shop__container">
-               <div class="shop__info">
-                  <div class="shop__content">
-                     <h2 class="shop__title">
+               <div class="shop__info hidden">
+                  <div class="shop__content hidden">
+                     <h2 class="shop__title hidden">
                         WE MADE YOUR EVERYDAY FASHION BETTER!
                      </h2>
                      <p class="shop__text">
@@ -411,17 +412,17 @@
                   </div>
                   <img src="./img/pic/bg-black.webp" alt="background" class="shop__img-info">
                </div>
-               <div class="shop__pic">
+               <div class="shop__pic hidden">
                   <img src="./img/pic/bg-group.webp" alt="people" class="shop__img-pic">
                </div>
             </div>
          </section>
          <section class="men">
             <div class="men__container">
-               <h2 class="men__title title">
+               <h2 class="men__title title hidden">
                   Categories For Men
                </h2>
-               <div class="men__items">
+               <div class="men__items hidden">
                   <article class="item-product item-product--category">
                      <a href="#" class="item-product__picture-link">
                         <img src="./img/pic/men-one.webp" alt="product-picture" class="item-product__img">
@@ -571,10 +572,10 @@
          </section>
          <section class="women">
             <div class="women__container">
-               <h2 class="women__title title">
+               <h2 class="women__title title hidden">
                   Categories For Women
                </h2>
-               <div class="women__items">
+               <div class="women__items hidden">
                   <article class="item-product item-product--category">
                      <a href="#" class="item-product__picture-link">
                         <img src="./img/pic/women-one.webp" alt="product-picture" class="item-product__img">
@@ -651,14 +652,14 @@
             </div>
          </section>
          <section class="brands">
-            <div class="brands__container">
-               <h2 class="brands__title">
+            <div class="brands__container hidden">
+               <h2 class="brands__title hidden">
                   Top Brands Deal
                </h2>
-               <p class="brands__info">
+               <p class="brands__info hidden">
                   Up To <span>60%</span> off on brands
                </p>
-               <div class="brands__items">
+               <div class="brands__items hidden">
                   <a href="#" target="_blank" class="brands__box">
                      <img src="./img/icon/nike-icon.png" alt="brand" class="brands__img">
                   </a>
@@ -679,10 +680,10 @@
          </section>
          <section class="limelight">
             <div class="limelight__container">
-               <h2 class="limelight__title title">
+               <h2 class="limelight__title title hidden">
                   In The Limelight
                </h2>
-               <div class="limelight__items">
+               <div class="limelight__items hidden">
                   <article class="item-product">
                      <a href="#" class="item-product__favorite">
                         <img src="./img/icon/heart-pic.svg" alt="heart" class="item-product__img-favorite">
@@ -772,17 +773,17 @@
          </section>
          <section class="reviews">
             <div class="reviews__container">
-               <h2 class="reviews__title title">
+               <h2 class="reviews__title title hidden">
                   Feedback
                </h2>
-               <div class="reviews__slider swiper">
+               <div class="reviews__slider swiper hidden">
                   <div class="reviews__wrapper swiper-wrapper">
                      <article class="reviews__slide slide-review swiper-slide">
                         <div class="slide-review__header">
-                           <div class="slide-review__avatar">
+                           <div class="slide-review__avatar hidden">
                               <img src="./img/pic/article-one.webp" alt="avatar" class="slide-review__img-avatar">
                            </div>
-                           <div class="slide-review__rate">
+                           <div class="slide-review__rate hidden">
                               <div class="rate">
                                  <div class="rate__items">
                                     <label class="rate__item">
@@ -804,20 +805,20 @@
                               </div>
                            </div>
                         </div>
-                        <h4 class="slide-review__name">
+                        <h4 class="slide-review__name hidden">
                            Floyd Miles
                         </h4>
-                        <div class="slide-review__text">
+                        <div class="slide-review__text hidden">
                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. </p>
                            <p>Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                         </div>
                      </article>
                      <article class="reviews__slide slide-review swiper-slide">
                         <div class="slide-review__header">
-                           <div class="slide-review__avatar">
+                           <div class="slide-review__avatar hidden">
                               <img src="./img/pic/article-two.webp" alt="avatar" class="slide-review__img-avatar">
                            </div>
-                           <div class="slide-review__rate">
+                           <div class="slide-review__rate hidden">
                               <div class="rate">
                                  <div class="rate__items">
                                     <label class="rate__item">
@@ -839,19 +840,19 @@
                               </div>
                            </div>
                         </div>
-                        <h4 class="slide-review__name">
+                        <h4 class="slide-review__name hidden">
                            Ronald Richards
                         </h4>
-                        <div class="slide-review__text">
+                        <div class="slide-review__text hidden">
                            <p>ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                         </div>
                      </article>
                      <article class="reviews__slide slide-review swiper-slide">
                         <div class="slide-review__header">
-                           <div class="slide-review__avatar">
+                           <div class="slide-review__avatar hidden">
                               <img src="./img/pic/article-three.webp" alt="avatar" class="slide-review__img-avatar">
                            </div>
-                           <div class="slide-review__rate">
+                           <div class="slide-review__rate hidden">
                               <div class="rate">
                                  <div class="rate__items">
                                     <label class="rate__item">
@@ -873,10 +874,10 @@
                               </div>
                            </div>
                         </div>
-                        <h4 class="slide-review__name">
+                        <h4 class="slide-review__name hidden">
                            Savannah Nguyen
                         </h4>
-                        <div class="slide-review__text">
+                        <div class="slide-review__text hidden">
                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
                               <p>Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                         </div>
