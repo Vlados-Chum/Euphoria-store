@@ -1,6 +1,5 @@
 "use strict"
 
-
 // BURGER
 
 document.addEventListener("click", handleClick);
@@ -108,7 +107,7 @@ if(heroSlider) {
 
 	const swiper = new Swiper('.hero', {
 		loop: true,
-		autoheight: true,
+		autoHeight: true,
 		speed: 1000,
 		parallax: true, //добавляет эффект параллакса с добавлением на элемент слайдера атрибута data-swiper-parallax="80%"
 	
